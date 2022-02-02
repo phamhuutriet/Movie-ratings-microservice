@@ -1,7 +1,7 @@
 package com.example.moviecatalogservice.resource;
 
 
-import com.example.moviecatalogservice.models.Movie;
+import com.example.moviecatalogservice.models.CatalogItem;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,9 +15,9 @@ public class MovieCatalogResource {
 
 
     @RequestMapping("/{userId}")
-    public List<Movie> getCatalog(@PathVariable("userId") String userId) {
+    public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
         return Collections.singletonList(
-                new Movie("Harry Potter", "And the goblet of fire", 4)
+                new CatalogItem("Harry Potter", "And the goblet of fire", 4)
         );
     }
 }

@@ -5,10 +5,10 @@ import lombok.Setter;
 
 public class Movie {
 
-    @Getter @Setter private int movieId;
+    @Getter @Setter private String movieId;
     @Getter @Setter private String name;
 
-    public Movie(int movieId, String name) {
+    public Movie(String movieId, String name) {
         this.movieId = movieId;
         this.name = name;
     }
